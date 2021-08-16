@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  /* background: #1C8EF9 !important; */
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+
+.collapse ul li {
+	text-align:center;
+}
+.collapse ul li {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;   
+	  display:inline-table;
+	  text-align: center;
+    color: #e2eaf3;
+    font-family: Verdana;
+	  font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+	  margin:0 5px;
+    margin-left: 30rem;
+
+}
+.flex-items{
+  display: flex;
+  width: 50px;
+}
+.collapse   {
+	display:table-cell;
+	vertical-align:middle;
+}
+.collapse :hover {
+    background: #30588e;
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body, html, .App, #root, .auth-wrapper {
+  width: 100%;
+  height: 100vh; 
+  
+}
+nav{
+  height: 100px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* background-color: #ffffff; */
+  
+}
+
+.navbar-light {
+  background-color: #f8f6f5;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+.auth-wrapper {
+  background-image: url("./images/hunterman.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #f87b14; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  text-align: left;
+} 
+
+.auth-wrapper img{
+  width: 30%;
+  margin: 20px auto;
+  border-radius: 40px;
+  opacity: 0.6;
 }
 
-.App-link {
-  color: #61dafb;
+.home-btn{
+  width: 100px; 
+  /* border-radius: 20px; */
+  margin-left: 0%;
+  /* margin-right: 90rem;
+  */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-inner{
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding:40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
+  opacity: 0.6;
+} 
+
+ .auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
 }
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.navbar-nav li{
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  display: block;
+  
+}
+
+.navbar-brand {
+  display: flex;
+  /* color: red; */
+  margin: 30px;
+  
+}
+
+.navbar-nav-collapse {
+  /* color: red; */
+  list-style: none;
+  /* border: 2px solid green; */
+}
+.nav-item {
+  /* color: red; */
+  margin-left: 45rem;
+}
+
+.btn-primary {
+  margin-left: 100rem;
+}
+
+/* .nav-item div:nth-child(1){
+  margin-left: 20px;
+} */
+
+/* .nav-item div:nth-child(2){
+  width: 10%;
+  height: 100%;
+  margin-right: 50px;
+  display:flex;
+  align-items: center;
+  flex-Direction:row;
+  justify-Content:space-between; 
+  /* background-color: #7f7d7d; */
+ 

@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+import {Provider} from  "react-redux";
+import store from "./store";
+axios.defaults.baseURL = 'htpp://localhost:8000/'; 
+axios.defaults.headers.common['Authorization'] = 'Bearer' + localStorage.getItem ('token');
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <App/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

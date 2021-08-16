@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './Components/home.component';
+import Nav from './Components/nav.component';
+import Login from './signup/login.component';
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
+import Register from './signup/register.component';
+import { Forgot } from './Components/forgot.component';
+import LOGO_IMG from './images/hunter.png'
+import { Reset } from './signup/reset.component';
+
+
 
 function App() {
+
+  
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Nav/>
+  
+  
+     <div className="auth-wrapper">
+       <img src={LOGO_IMG} alt="LOGO_IMG" />
+        <div className="auth-inner">
+
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/forgot" component={Forgot}/>
+            <Route exact path="/reset/:id" component={Reset}/>
+          </Switch>
+
+        </div>
+      </div> 
     </div>
+    </BrowserRouter> 
+  
   );
 }
 
 export default App;
+
+      
